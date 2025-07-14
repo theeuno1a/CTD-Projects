@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>JavaScript Basics and Functions</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learning Objectives">
-  </head>
+<head>
+  <title>JavaScript Basics and Functions</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learning Objectives" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="basic.js" />
+</head>
 
-<ul>
-  <li><a href="#home">HOME</a></li>
-  <li><a href="#about">ABOUT</a></li>
-  <li><a href="#experience">EXPERIENCE</a></li>
-  <li><a href="#connect">CONNECT</a></li>
-</ul>
-  
-  <body> 
-    
-    <h1>Riah Johnson</h1>
+<body>
+  <nav>
+    <ul class="nav-list">
+      <li class="nav-item active"><a href="#home">HOME</a></li>
+      <li class="nav-item"><a href="#about">ABOUT</a></li>
+      <li class="nav-item"><a href="#experience">EXPERIENCE</a></li>
+      <li class="nav-item"><a href="#connect">CONNECT</a></li>
+    </ul>
+  </nav>
 
-   <section id="About">
-  <h2>About</h2>
-<p> Hi! I'm passionate about all things tech, creativity, and learning new skills that push me outside my comfort zone. When I'm not coding or designing, you'll probably find me watching anime, sketching, or sewing something cute. I’ve always loved expressing myself through the arts — from digital design to DIY fashion. I believe creativity and innovation go hand in hand, and I’m constantly exploring new ways to blend both. This journey is just getting started, and I’m excited to keep leveling up!</p>
-</section>
+  <!-- Theme toggle switch -->
+  <label class="theme-switch" title="Toggle Light/Dark Mode">
+    <input type="checkbox" id="toggle-theme" />
+    <span class="slider"></span>
+  </label>
 
-<section id="Experience">
-  <h2>Experience</h2>
-  <ul>
-    <li>Director of Operations, Stand 4 Sisterhood</li>
-    <li>Certified in IT Support, Networking, System Admin</li>
-    <li>Cosmetologist & Creative Entrepreneur</li>
-  </ul>
-</section>
+  <div class="container">
+    <section id="home">
+      <h1>Riah Johnson</h1>
+    </section>
 
-<section id="Connect">
-  <h2>Connect</h2>
-  <ul>
-    <li><a href="https://www.linkedin.com/in/linkwmsj/" target="_blank">LinkedIn</a></li>
-    <li><a href="mailto:msjohnsonjr311@gmail.com">Email Me</a></li>
-  </ul>
-</section>
-    
-  </body>
-</html>
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        Hi! I'm passionate about all things tech, creativity, and learning new skills that push me outside my comfort zone.
+        When I'm not coding or designing, you'll probably find me watching anime, sketching, or sewing something cute.
+      </p>
+      <p>
+        I’ve always loved expressing myself through the arts — from digital design to DIY fashion. I believe creativity and innovation go hand in hand,
+        and I’m constantly exploring new ways to blend both. This journey is just getting started, and I’m excited to keep leveling up!
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul class="exper-list">
+        <li class="exper-item">Director of Operations, Stand 4 Sisterhood</li>
+        <li class="exper-item">Certified in IT Support, Networking, System Admin</li>
+        <li class="exper-item">Cosmetologist & Creative Entrepreneur</li>
+      </ul>
+    </section>
+
+    <section id="connect">
+      <h2>Connect</h2>
+      <ul class="connect-list">
+        <li class="connect-item">
+          <a href="https://www.linkedin.com/in/linkwmsj/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+        <li class="connect-item">
+          <a href="mailto:msjohnsonjr311@gmail.com">Email Me</a>
+        </li>
+      </ul>
+    </section>
+  </div>
