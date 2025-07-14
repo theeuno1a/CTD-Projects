@@ -1,141 +1,212 @@
-    
-   html {
+html {
   scroll-behavior: smooth;
-    }
-    
- /* wanted to reset default body */
-    body {
-      background-color: #fff;
-      color: black;
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      transition: background-color 0.3s, color 0.3s;
-    }
+}
 
-    /* container for text */
-    .container {
-      padding: 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
+/* wanted to reset default body */
+body {
+  background-color: #fff;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-    /* starting nav styles */
-    nav {
-      background-color: #225555;
-      width: 100%;
-      padding: 10px 20px;
-      box-sizing: border-box;
-      transition: background-color 0.3s;
-    }
+/* containers for text */
+.container {
+  width: 100%;
+}
 
-    .nav-list {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-      padding: 0;
-      margin: 0;
-    }
+.container2 {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-    .nav-item a {
-      color: #000;
-      text-decoration: none;
-      padding: 10px 15px;
-      display: block;
-      font-weight: 600;
-      border-radius: 3px;
-      transition: background-color 0.3s, color 0.3s;
-    }
+/* starting nav styles */
+nav {
+  background-color: #225555;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+}
 
-    .nav-item a:hover {
-      background-color: #ffffff;
-      color: #000000;
-    }
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  padding: 0;
+  margin: 0;
+}
 
-    .active a {
-      background-color: #fff;
-      color: #000;
-      border-bottom: 2px solid #000;
-    }
+.nav-item a {
+  color: #000;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  font-weight: 600;
+  border-radius: 3px;
+  transition: background-color 0.3s, color 0.3s;
+}
 
-    /* starting headings  */
-    h1 {
-      margin: 30px 0 20px;
-    }
+.nav-item a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
 
-    h2 {
-      margin-bottom: 15px;
-    }
+.active a {
+  background-color: #fff;
+  color: #000;
+  border-bottom: 2px solid #000;
+}
 
-/* starting sections  */
-    section {
-      margin-top: 40px;
-    }
+.bg {
+  height: 100vh; 
+  width: 100vw;  /*i struggled semi to fix this photo LOL, yet i finally got it after an hr*/
+  background-image: url("https://i.pinimg.com/736x/98/43/b4/9843b4da17d4a90aebe486aa608d36da.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
 
-    /* starting list */
-    .exper-list, .connect-list {
-      padding-left: 20px;
-    }
+.photo-divider { /*i wanted a line underneath photo cause it'll be cute*/
+  border: none;
+  height: 3px; 
+  background-color: pink;
+  width: 100%; 
+  margin: 0 auto; 
+}
 
-    /* starting light/dark mode toggle styles */
-    .theme-switch {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-      user-select: none;
-    }
+/* starting headings */
+#Home h1 {
+  margin: 0;
+  font-size: 5rem;
+  font-weight: bold;
+  color: pink;
+  font-family: Impact;
+  text-shadow: 5px 3px 4px rgba(0, 0, 0, 0.6);
+  opacity: 0.80;
+}
 
-    .theme-switch input {
-      display: none;
-    }
+h2 {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: Cambria;
+}
 
-    .slider {
-      width: 50px;
-      height: 24px;
-      background-color: #ccc;
-      border-radius: 50px;
-      position: relative;
-      cursor: pointer;
-      display: inline-block;
-      transition: background-color 0.3s;
-    }
+/* sections */
+section {
+  margin-top: 40px;
+}
 
-    .slider::before {
-      content: "";
-      position: absolute;
-      height: 20px;
-      width: 20px;
-      left: 2px;
-      bottom: 2px;
-      background-color: white;
-      border-radius: 50%;
-      transition: 0.3s;
-    }
+/* lists */
+.exper-list {
+  padding: 20px 30px 10px 40px;
+  background-color: #225555;
+  border-radius: 5px;
+  text-align: left;
+  color: whitesmoke;
+  font-family: 'Courier New', Courier, monospace;
+  gap: 20px; 
+}
 
-    input:checked + .slider {
-      background-color: #333;
-    }
+.connect-list {
+  padding: 20px 30px 10px 40px;
+  background-color: #225555;
+  border-radius: 5px;
+  list-style: none;   
+  display: flex;   
+  gap: 80px; 
+  justify-content: center;
+}
 
-    input:checked + .slider::before {
-      transform: translateX(26px);
-    }
+/* light/dark mode toggle styles */
+.theme-switch {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  user-select: none;
+}
 
-    /* the theme styles i went with */
-    body.light-mode {
-      background-color: #fff;
-      color: #000;
-    }
+.theme-switch input {
+  display: none;
+}
 
-    body.dark-mode {
-      background-color: #121212;
-      color: #fff;
-    }
+.slider {
+  width: 50px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
 
-    nav.dark-mode {
-      background-color: #1f1f1f;
-    }
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
 
-    nav.light-mode {
-      background-color: #225555;
-    }
+input:checked + .slider {
+  background-color: pink; /* changed to pink for visibility */
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+/* the theme styles i went with */
+body.light-mode {
+  background-color: #fff;
+  color: #000;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark-mode nav {
+  background-color: black;
+}
+
+body.light-mode nav {
+  background-color: #225555;
+}
+
+/* dark mode nav links fix */
+body.dark-mode .nav-item a {
+  color: white;
+}
+
+body.dark-mode .nav-item a:hover {
+  background-color: #333;
+  color: pink;
+}
+
+/* dark mode active nav fix */
+body.dark-mode .active a {
+  background-color: #333; 
+  color: pink;             
+  border-bottom: 2px solid pink;
+}
+
+body.dark-mode .active a:hover {
+  background-color: #bad4d4;  /* a bit lighter on hover so i can see it */
+  color: white;
+}
